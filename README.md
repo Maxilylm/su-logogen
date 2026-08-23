@@ -2,7 +2,7 @@
 
 > Describe your brand and get three SVG logo concepts, rendered live and downloadable as real vector files.
 
-**[Live demo](https://su-logogen.vercel.app)**
+**[Live demo](https://logogen-mlx.vercel.app)**
 
 Most AI logo tools return a raster image you cannot edit. LogoGen asks Llama 3.3 70B to write the SVG markup directly — shapes, paths, gradients, transforms, and the brand name as actual `<text>` — so what you download is a real vector file you can open in a design tool and change. Give it a brand name, a description, a style, and optionally a primary color, and it returns three distinct concepts rendered in the browser as live SVG.
 
@@ -32,4 +32,4 @@ Requires `GROQ_API_KEY` in `.env.local`.
 
 ---
 
-Part of a series of 91 small web apps. [Browse them all](https://su-slopmachine.vercel.app).
+Part of a series of 91 small web apps. [Browse them all](https://lorenzoylosada.vercel.app).
