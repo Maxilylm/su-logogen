@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LogoGen
 
-## Getting Started
+> Describe your brand and get three SVG logo concepts, rendered live and downloadable as real vector files.
 
-First, run the development server:
+**[Live demo](https://su-logogen.vercel.app)**
+
+Most AI logo tools return a raster image you cannot edit. LogoGen asks Llama 3.3 70B to write the SVG markup directly — shapes, paths, gradients, transforms, and the brand name as actual `<text>` — so what you download is a real vector file you can open in a design tool and change. Give it a brand name, a description, a style, and optionally a primary color, and it returns three distinct concepts rendered in the browser as live SVG.
+
+## Features
+
+- Three logo concepts per run, each with a concept name and a short rationale
+- Six style presets: minimalist, geometric, playful, elegant, bold, and tech
+- Optional primary color picker that steers the palette, or let the model choose
+- Live preview of the generated SVG with a light/dark background toggle
+- Download each concept as a real `.svg` file, named from the concept
+- SVG output sanitized on both server and client — script tags, event handlers, and `javascript:` URLs stripped
+
+## Stack
+
+- Next.js 16 (App Router) with React 19 and TypeScript
+- Tailwind CSS v4
+- Groq Chat Completions API — `llama-3.3-70b-versatile` at temperature 0.9
+
+## Running locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Requires `GROQ_API_KEY` in `.env.local`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Part of a series of 91 small web apps. [Browse them all](https://su-slopmachine.vercel.app).
